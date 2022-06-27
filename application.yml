@@ -73,36 +73,36 @@ chaos:
 
 ---
 spring:
-config:
-   activate:
-      on-profile: mysql
-jms:
-   servicebus:
-      connection-string: ${spring.jms.servicebus.connection-string}
-      idle-timeout: 60000
-      pricing-tier: premium
-datasource:
-   schema: classpath*:db/mysql/schema.sql
-   data: classpath*:db/mysql/data.sql
-   url: jdbc:mysql://hmysql.mysql.database.azure.com:3306/petclinic?useSSL=true
-   initialization-mode: ALWAYS
-kafka:
-   bootstrap-servers: javalab-eh-ns-h.servicebus.windows.net:9093
-   client-id: first-service
-   group-id: $Default
-   properties:
-      sasl.jaas.config:
-      sasl.mechanism: PLAIN
-      security.protocol: SASL_SSL
-      spring.json:
-      use.type.headers: false
-      value.default.type: com.targa.labs.dev.telemetrystation.Message
-cloud:
-   azure:
-      keyvault:
-      secret:
-         property-source-enabled: true
-         property-sources:
-            - name: key-vault-property-souece-1
-            endpoint: https://petclinickv.vault.azure.net/
-            credential.managed-identity-enabled: true
+  config:
+    activate:
+        on-profile: mysql
+  jms:
+    servicebus:
+        connection-string: ${spring.jms.servicebus.connection-string}
+        idle-timeout: 60000
+        pricing-tier: premium
+  datasource:
+    schema: classpath*:db/mysql/schema.sql
+    data: classpath*:db/mysql/data.sql
+    url: jdbc:mysql://hmysql.mysql.database.azure.com:3306/petclinic?useSSL=true
+    initialization-mode: ALWAYS
+  kafka:
+    bootstrap-servers: javalab-eh-ns-h.servicebus.windows.net:9093
+    client-id: first-service
+    group-id: $Default
+    properties:
+        sasl.jaas.config:
+        sasl.mechanism: PLAIN
+        security.protocol: SASL_SSL
+        spring.json:
+        use.type.headers: false
+        value.default.type: com.targa.labs.dev.telemetrystation.Message
+  cloud:
+    azure:
+        keyvault:
+        secret:
+          property-source-enabled: true
+          property-sources:
+              - name: key-vault-property-souece-1
+              endpoint: https://petclinickv.vault.azure.net/
+              credential.managed-identity-enabled: true
