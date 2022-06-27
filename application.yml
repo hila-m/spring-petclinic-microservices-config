@@ -95,5 +95,5 @@ spring:
          property-source-enabled: true
          property-sources:
              - name: key-vault-property-souece-1
-             endpoint: https://<key-vault-name>.vault.azure.net/
+             endpoint: https://petclinickv.vault.azure.net/
              credential.managed-identity-enabled: true
