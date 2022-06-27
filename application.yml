@@ -93,3 +93,11 @@ spring:
              - name: key-vault-property-source-1
              endpoint: https://petclinickv.vault.azure.net/
              credential.managed-identity-enabled: true
+             
+         secret:
+         property-source-enabled: true
+         property-sources:
+             - name: key-vault-property-souece-1
+             endpoint: https://petclinickv.vault.azure.net/
+             credential.managed-identity-enabled: true
+
