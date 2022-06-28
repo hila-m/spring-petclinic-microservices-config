@@ -99,10 +99,10 @@ spring:
         value.default.type: com.targa.labs.dev.telemetrystation.Message
   cloud:
     azure:
-        keyvault:
-          secret:
-            property-source-enabled: true
-            property-sources:
-                - name: key-vault-property-source-1
-                endpoint: https://petclinickv.vault.azure.net/
-                credential.managed-identity-enabled: true
+      keyvault:
+        secret:
+          property-source-enabled: true
+          property-sources:
+            - name: key-vault-property-source-1
+            endpoint: https://petclinickv.vault.azure.net/
+            credential.managed-identity-enabled: true
