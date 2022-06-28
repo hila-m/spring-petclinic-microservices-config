@@ -75,12 +75,12 @@ chaos:
 spring:
   config:
     activate:
-        on-profile: mysql
+      on-profile: mysql
   jms:
     servicebus:
-        connection-string: ${spring.jms.servicebus.connection-string}
-        idle-timeout: 60000
-        pricing-tier: premium
+      connection-string: ${spring.jms.servicebus.connection-string}
+      idle-timeout: 60000
+      pricing-tier: premium
   datasource:
     schema: classpath*:db/mysql/schema.sql
     data: classpath*:db/mysql/data.sql
@@ -91,12 +91,12 @@ spring:
     client-id: first-service
     group-id: $Default
     properties:
-        sasl.jaas.config:
-        sasl.mechanism: PLAIN
-        security.protocol: SASL_SSL
-        spring.json:
-        use.type.headers: false
-        value.default.type: com.targa.labs.dev.telemetrystation.Message
+      sasl.jaas.config:
+      sasl.mechanism: PLAIN
+      security.protocol: SASL_SSL
+      spring.json:
+      use.type.headers: false
+      value.default.type: com.targa.labs.dev.telemetrystation.Message
   cloud:
     azure:
       keyvault:
